@@ -10,5 +10,5 @@ public interface RepositorioPermisoTabla extends JpaRepository<PermisoTabla,Perm
     List<PermisoTabla> findByIdNombreTabla(String nombreTabla);
     List<PermisoTabla> findByIdPrivilegio(String privilegio);
     List<PermisoTabla> findByPropietario(String propietario);
-    List<PermisoTabla> findByOtorgado(String otorgado);
+    List<PermisoTabla> findByIdOtorgado(String otorgado);
 }

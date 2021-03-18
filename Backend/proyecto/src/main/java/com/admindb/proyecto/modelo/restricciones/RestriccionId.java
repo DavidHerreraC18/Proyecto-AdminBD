@@ -1,5 +1,4 @@
-package com.admindb.proyecto.modelo.permisos;
-
+package com.admindb.proyecto.modelo.restricciones;
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -17,17 +16,15 @@ import lombok.EqualsAndHashCode;
 @Embeddable
 @EqualsAndHashCode
 @RequiredArgsConstructor
-public class PermisoColumnaId implements Serializable {
-    
-    @Column(name = "privilege")
-    private String privilegio;
+public class RestriccionId implements Serializable {
+
 
     @Column(name = "table_name")
     private String nombreTabla;
 
-    @Column(name = "column_name")
-    private String nombreColumna;
+    @Column(name = "constraint_name")
+    private String nombreRestriccion;
 
-    @Column(name = "grantee")
-    private String otorgado;
+    @Column(name = "owner")
+    private String propietario;
 }

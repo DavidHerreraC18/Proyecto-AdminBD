@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RepositorioObjeto extends JpaRepository<Objeto,String> {
-    List<Objeto> findByTipo(String tipo);
-    List<Objeto> findByPropietario(String propietario);
-    List<Objeto> findByTipoAndPropietario(String tipo,String propietario);
+    List<Objeto> findByIdTipo(String tipo);
+    List<Objeto> findByIdPropietario(String propietario);
+    List<Objeto> findByIdTipoAndIdPropietario(String tipo,String propietario);
 }

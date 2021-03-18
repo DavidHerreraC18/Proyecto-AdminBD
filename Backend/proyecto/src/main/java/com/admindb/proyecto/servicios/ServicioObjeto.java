@@ -30,33 +30,33 @@ public class ServicioObjeto {
 
     @GetMapping(value = "/procedures",produces = "application/json")
     public List<Objeto> findAllProcedures() {
-        return repositorioObjeto.findByTipo("PROCEDURE");
+        return repositorioObjeto.findByIdTipo("PROCEDURE");
     }
 
     @GetMapping(value = "/procedures/{propietario}",produces = "application/json")
     public List<Objeto> findProceduresByPropietario(@PathVariable("propietario") String propietario) {
-        return repositorioObjeto.findByTipoAndPropietario("PROCEDURE",propietario);
+        return repositorioObjeto.findByIdTipoAndIdPropietario("PROCEDURE",propietario);
     }
 
     @GetMapping(value = "/functions",produces = "application/json")
     public List<Objeto> findAllFunctions() {
-        return repositorioObjeto.findByTipo("FUNCTION");
+        return repositorioObjeto.findByIdTipo("FUNCTION");
     }
 
     @GetMapping(value = "/functions/{propietario}",produces = "application/json")
     public List<Objeto> findFunctionsByPropietario(@PathVariable("propietario") String propietario) {
-        return repositorioObjeto.findByTipoAndPropietario("FUNCTION",propietario);
+        return repositorioObjeto.findByIdTipoAndIdPropietario("FUNCTION",propietario);
     }
 
 
     @GetMapping(value = "/packages",produces = "application/json")
     public List<Objeto> findAllPackages() {
-        return repositorioObjeto.findByTipo("PACKAGE");
+        return repositorioObjeto.findByIdTipo("PACKAGE");
     }
 
     @GetMapping(value = "/packages/{propietario}",produces = "application/json")
     public List<Objeto> findPackagesByPropietario(@PathVariable("propietario") String propietario) {
-        return repositorioObjeto.findByTipoAndPropietario("PACKAGE",propietario);
+        return repositorioObjeto.findByIdTipoAndIdPropietario("PACKAGE",propietario);
     }
 
 

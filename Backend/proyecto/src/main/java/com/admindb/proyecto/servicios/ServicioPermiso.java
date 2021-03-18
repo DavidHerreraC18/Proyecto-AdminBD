@@ -30,7 +30,7 @@ public class ServicioPermiso {
 
     @GetMapping(value = "/columna/{otorgado}", produces = "application/json")
     public List<PermisoColumna> findPermisoColumnaByOtorgado( @PathVariable("otorgado") String otorgado) {
-        return repositorioPermisoColumna.findByOtorgado(otorgado);
+        return repositorioPermisoColumna.findByIdOtorgado(otorgado);
     }
 
     @GetMapping(value = "/tabla",produces = "application/json")
@@ -40,6 +40,6 @@ public class ServicioPermiso {
 
     @GetMapping(value = "/tabla/{otorgado}", produces = "application/json")
     public List<PermisoTabla> findPermisoTablaByOtorgado( @PathVariable("otorgado") String otorgado) {
-        return repositorioPermisoTabla.findByOtorgado(otorgado);
+        return repositorioPermisoTabla.findByIdOtorgado(otorgado);
     }
 }

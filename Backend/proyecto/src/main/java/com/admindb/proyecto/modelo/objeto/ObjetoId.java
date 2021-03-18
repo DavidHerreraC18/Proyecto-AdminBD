@@ -1,4 +1,4 @@
-package com.admindb.proyecto.modelo.permisos;
+package com.admindb.proyecto.modelo.objeto;
 
 import java.io.Serializable;
 
@@ -17,14 +17,13 @@ import lombok.EqualsAndHashCode;
 @Embeddable
 @EqualsAndHashCode
 @RequiredArgsConstructor
-public class PermisoTablaId implements Serializable{
-    
-    @Column(name = "table_name")
-    private String nombreTabla;
+public class ObjetoId implements Serializable {
+    @Column(name = "owner")
+    private String propietario;
 
-    @Column(name = "privilege")
-    private String privilegio;
+    @Column(name = "object_name")
+    private String nombre;
 
-    @Column(name = "grantee")
-    private String otorgado;
+    @Column(name = "object_type")
+    private String tipo;
 }

@@ -23,7 +23,6 @@ public class PermisoColumna {
     @Column(name = "owner")
     private String propietario;
 
-    @Column(name = "grantee")
-    private String otorgado;
+    
     
 }

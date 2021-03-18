@@ -8,16 +8,22 @@ import { AppComponent } from './app.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { UsuariosService } from './services/usuarios.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TablasComponent } from './components/tablas/tablas.component';
 
 const routes: Routes = [
   {path: 'usuariosdb',
-   component: UsuariosComponent}
+   component: UsuariosComponent},
+  {path: 'tablas',
+   component: TablasComponent},
+  {path: '',
+   component: UsuariosComponent},
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    TablasComponent
   ],
   imports: [
     BrowserModule,
