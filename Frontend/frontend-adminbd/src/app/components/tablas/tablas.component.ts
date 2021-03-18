@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< Updated upstream
 import { ActivatedRoute } from '@angular/router';
 import { Tabla } from 'src/app/common/tabla';
 import { TablasService } from 'src/app/services/tablas.service';
+=======
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'app-tablas',
@@ -10,6 +13,7 @@ import { TablasService } from 'src/app/services/tablas.service';
 })
 export class TablasComponent implements OnInit {
 
+<<<<<<< Updated upstream
   tablas: Tabla [] = [];
 
   constructor(private activeRoute: ActivatedRoute, private tablasService: TablasService) { }
@@ -23,6 +27,11 @@ export class TablasComponent implements OnInit {
   handlerTablasPropietario(): void{
     const param = this.activeRoute.snapshot.paramMap.get('propietario') as string;
     this.tablasService.getTablasPropietario(param);
+=======
+  constructor() { }
+
+  ngOnInit(): void {
+>>>>>>> Stashed changes
   }
 
 }
