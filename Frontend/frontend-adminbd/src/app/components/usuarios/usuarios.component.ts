@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/common/usuario';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
+
+
+
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
@@ -14,7 +17,8 @@ export class UsuariosComponent implements OnInit {
   constructor(private usuarioServicio: UsuariosService) { }
 
   ngOnInit(): void {  
-    //this.handleListaUsuarios();
+    this.handleListaUsuarios();
+    
    }
 
   handleListaUsuarios(){
@@ -24,5 +28,7 @@ export class UsuariosComponent implements OnInit {
       }
     );
   }
+
+
 
 }
