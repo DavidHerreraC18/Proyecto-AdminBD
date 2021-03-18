@@ -1,5 +1,5 @@
 export class Usuario {
     
-    nombre: string;
+    nombre: string = '';
 
 }
