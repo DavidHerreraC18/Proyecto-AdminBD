@@ -16,6 +16,8 @@ import { UsuariosDetallesComponent } from './components/usuarios-detalles/usuari
 import { ColumnaService } from './services/tabla_propietario/columna.service';
 import { TablaPermisosService } from './services/permisos_usuario/tabla-permisos.service';
 import { ColumnasPermisosComponent } from './components/columnas-permisos/columnas-permisos.component';
+import { TablasService } from './services/tabla_propietario/tablas.service';
+import { ColumnasPermisosService } from './services/permisos_usuario/columnas-permisos.service';
 
 
 @NgModule({
@@ -37,7 +39,13 @@ import { ColumnasPermisosComponent } from './components/columnas-permisos/column
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [UsuariosService, ColumnaService, TablaPermisosService],
+  providers: [
+    UsuariosService, 
+    TablasService, 
+    ColumnaService, 
+    TablaPermisosService,
+    ColumnasPermisosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

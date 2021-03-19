@@ -6,7 +6,6 @@ export class Objeto {
 
     estado: string;
 
-
     constructor(id: ObjetoId,estado: string){
         this.id = id;
         this.estado = estado;
