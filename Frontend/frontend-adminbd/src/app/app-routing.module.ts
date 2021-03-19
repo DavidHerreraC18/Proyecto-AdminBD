@@ -22,10 +22,10 @@ const routes: Routes = [
    component: PermisosUsuariosComponent},
   {path: 'columnas-propietarios',
    component: ColumnasTablasComponent},
-  {path: 'menu',
-   component: MenuComponent},
   {path: 'usuarios-propietarios',
    component: UsuariosComponent},
+  {path: 'menu',
+   component: MenuComponent},
   {path: '',
    component: MenuComponent},
 ];
