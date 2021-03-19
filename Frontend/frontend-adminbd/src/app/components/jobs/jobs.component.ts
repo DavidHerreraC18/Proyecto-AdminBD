@@ -26,11 +26,11 @@ export class JobsComponent implements OnInit {
   
   updateHabilitado(job : Job): void{
      
-    if(job.habilitado == 'enabled'){
-         job.habilitado = 'disabled';
+    if(job.habilitado == 'true'){
+         job.habilitado = 'false';
      }
      else{
-        job.habilitado == 'enabled'
+        job.habilitado == 'true';
      }
 
      this.jobsServices.updateHabilitado(job);
