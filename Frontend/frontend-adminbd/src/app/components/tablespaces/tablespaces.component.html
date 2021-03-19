@@ -6,22 +6,16 @@
       <thead>
         <tr>
           <th>Nombre</th>
-          <th>Espacio libre</th>
           <th>Espacio ocupado</th>
+          <th>Espacio libre</th>
         </tr>
       </thead>
       <tbody>
-        <!--<tr *ngFor="let tabla of tablas">
-          <td>{{tabla.nombre}}</td>
-          <td>{{tabla.propietario}}</td>
-          <div *ngFor="let comentario of comentarios ">
-            <td *ngIf="comentario.comentario!=null; else elseBlock">{{comentario.comentario}}</td>
-            <ng-template #elseBlock><td>N.A</td></ng-template>
-          </div>
-          <div>
-            <button routerLink="/columnas/{{ tabla.nombre }}" type="button" class="btn btn-primary">Columnas</button>
-          </div>
-        </tr>-->
+       <tr *ngFor="let tablespace of tablespaces">
+          <td>{{tablespace.tablespace}}</td>
+          <td>{{tablespace.usado}}</td>
+          <td>{{tablespace.libre}}</td>
+        </tr>
       </tbody>
     </table>
   </div>

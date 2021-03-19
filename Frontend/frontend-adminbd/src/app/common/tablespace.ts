@@ -1,19 +1,14 @@
-import { EspacioTotal } from "./espacio-total";
-import { EspacioUsado } from "./espacio-usado";
-
 export class Tablespace {
-    nombre:       string;
-    espacioTotal: EspacioTotal;
-    espacioUsado: EspacioUsado;
-    espacioLibre: BigInt;
+    tablespace: string;
+    usado: number;
+    libre: number;
     
-    constructor(nombre: string, espacioTotal: EspacioTotal, 
-                espacioUsado: EspacioUsado, espacioLibre: BigInt){
+    constructor(tablespace: string, 
+                usado: number, libre: number){
     
-    this.nombre       = nombre;
-    this.espacioTotal = espacioTotal;
-    this.espacioUsado = espacioUsado;
-    this.espacioLibre = espacioLibre;
+    this.tablespace = tablespace;
+    this.usado      = usado;
+    this.libre      = libre;
     
     }
 }

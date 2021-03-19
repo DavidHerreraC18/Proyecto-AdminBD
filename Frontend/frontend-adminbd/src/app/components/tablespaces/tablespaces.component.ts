@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tablespace } from 'src/app/common/tablespace';
+import { TablespacesService } from 'src/app/services/tablespaces/tablespaces.service';
 
 @Component({
   selector: 'app-tablespaces',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablespacesComponent implements OnInit {
  
-  constructor() { }
+  tablespaces : Tablespace [] = []
+
+  constructor(private tablespacesService: TablespacesService) { }
 
   ngOnInit(): void {
+    this.handlerTablespaces();
+  }
+
+  handlerTablespaces(){
+    this.tablespacesService.getTablespaces().subscribe(
+      response => {
+        this.tablespaces = response
+      }
+    );
   }
 
 }
