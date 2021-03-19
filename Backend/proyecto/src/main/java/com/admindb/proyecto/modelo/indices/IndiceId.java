@@ -24,4 +24,7 @@ public class IndiceId implements Serializable {
 
     @Column(name = "column_name")
     private String nombreColumna;
+    
+    @Column(name = "index_name")
+    private String nombreIndice;
 }

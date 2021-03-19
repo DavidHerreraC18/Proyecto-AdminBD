@@ -9,5 +9,7 @@ import org.springframework.stereotype.Repository;
 public interface RepositorioIndice extends JpaRepository<Indice,IndiceId>{
     List<Indice> findByIdNombreTabla(String nombreTabla);
     List<Indice> findByIdNombreColumna(String nombreColumna);
+    List<Indice> findByIdNombreIndice(String nombreTabla);
+    List<Indice> findByIdNombreTablaAndIdNombreColumna(String nombreTabla, String nombreColumna);
     
 }

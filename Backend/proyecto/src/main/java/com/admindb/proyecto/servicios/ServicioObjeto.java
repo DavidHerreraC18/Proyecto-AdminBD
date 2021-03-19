@@ -24,9 +24,11 @@ public class ServicioObjeto {
     }
 
     @GetMapping(value = "/{id}", produces = "application/json")
-    public Objeto findById( @PathVariable("id") String id) {
-        return repositorioObjeto.findById(id).get();
+    public List<Objeto> findByPropietario( @PathVariable("id") String id) {
+        return repositorioObjeto.findByIdPropietario(id);
     }
+
+    
 
     @GetMapping(value = "/procedures",produces = "application/json")
     public List<Objeto> findAllProcedures() {

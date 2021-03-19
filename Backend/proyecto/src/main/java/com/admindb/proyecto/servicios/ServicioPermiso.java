@@ -38,8 +38,18 @@ public class ServicioPermiso {
         return repositorioPermisoTabla.findAll();
     }
 
+    @GetMapping(value = "/{otorgado}/{tabla}", produces = "application/json")
+    public List<PermisoColumna> findPermisoColumnaByOtorgado( @PathVariable("otorgado") String otorgado, @PathVariable("tabla") String tabla) {
+        return repositorioPermisoColumna.findByIdOtorgadoAndIdNombreTabla(otorgado, tabla);
+    }
+
     @GetMapping(value = "/tabla/{otorgado}", produces = "application/json")
     public List<PermisoTabla> findPermisoTablaByOtorgado( @PathVariable("otorgado") String otorgado) {
         return repositorioPermisoTabla.findByIdOtorgado(otorgado);
+    }
+
+    @GetMapping(value = "/{otorgado}/{tabla}/{columna}", produces = "application/json")
+    public List<PermisoColumna> findPermisoTablaByNombreTablaAndNombreColumnaAndOtorgado( @PathVariable("tabla") String tabla, @PathVariable("columna") String columna, @PathVariable("otorgado") String otorgado) {
+        return repositorioPermisoColumna.findByIdNombreTablaAndIdNombreColumnaAndIdOtorgado(tabla, columna, otorgado);
     }
 }

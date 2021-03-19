@@ -23,9 +23,9 @@ public class ServicioIndice {
         return repositorioIndice.findAll();
     }
 
-    @GetMapping(value = "/{id}", produces = "application/json")
-    public List<Indice> findIndiceByNombreTabla( @PathVariable("id") String id) {
-        return repositorioIndice.findByIdNombreTabla(id);
+    @GetMapping(value = "/{id}/{idcol}", produces = "application/json")
+    public List<Indice> findIndiceByNombreTablaAndColumna( @PathVariable("id") String id, @PathVariable("idcol") String idcol) {
+        return repositorioIndice.findByIdNombreTablaAndIdNombreColumna(id,idcol);
     }
     
 }

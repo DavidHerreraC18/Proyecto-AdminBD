@@ -20,6 +20,4 @@ public class Indice {
     @EmbeddedId
     private IndiceId id;
 
-    @Column(name = "index_name")
-    private String nombreIndice;
 }

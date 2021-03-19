@@ -12,4 +12,6 @@ public interface RepositorioPermisoColumna extends JpaRepository<PermisoColumna,
     List<PermisoColumna> findByIdPrivilegio(String privilegio);
     List<PermisoColumna> findByPropietario(String propietario);
     List<PermisoColumna> findByIdOtorgado(String otorgado);
+    List<PermisoColumna> findByIdOtorgadoAndIdNombreTabla(String otorgado,String nombreTabla);
+    List<PermisoColumna> findByIdNombreTablaAndIdNombreColumnaAndIdOtorgado(String nombreTabla, String nombreColumna ,String otorgado);
 }
