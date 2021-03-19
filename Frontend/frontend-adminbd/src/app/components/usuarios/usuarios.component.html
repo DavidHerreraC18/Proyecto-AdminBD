@@ -1,6 +1,6 @@
 <div class="container mt-4">
-  <h2>Base de Datos</h2>
-  <form>
+  <h2>Usuarios Propietarios</h2>
+  <form class="mt-4">
     <div class="form-group">
       <label for="usuariosSelect">Usuarios</label>
       <select class="form-control col-md-4" id="usuariosSelect">
@@ -9,4 +9,30 @@
       </select>
     </div>
   </form>
+</div>
+<div class="container mt-5">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Nombre Tabla</th>
+        <th>Propietario</th>
+        <th>Comentarios</th>
+        <th>Restricciones</th>
+        <th>Columnas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tabla of tablas">
+        <td>{{tabla.nombre}}</td>
+        <td>{{tabla.propietario}}</td>
+        <div *ngFor="let comentario of comentarios ">
+          <td *ngIf="comentario.comentario!=null; else elseBlock">{{comentario.comentario}}</td>
+          <ng-template #elseBlock><td>N.A</td></ng-template>
+        </div>
+        <div>
+          <button routerLink="/columnas/{{ tabla.nombre }}" type="button" class="btn btn-primary">Columnas</button>
+        </div>
+      </tr>
+    </tbody>
+  </table>
 </div>

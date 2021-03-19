@@ -1,0 +1,32 @@
+<div class="container mt-4">
+  <h2>Columnas</h2>
+  <div class="mt-4">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre Columna</th>
+          <th>Tipo de Dato</th>
+          <th>Comentarios</th>
+          <th>Indices</th>
+         </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let columna of columnas">
+          <td>{{columna.id.nombreColumna}}</td>
+          <td>{{columna.tipoDato}}</td>
+          <div *ngFor="let comentario of comentarios">
+            <td *ngIf="comentario.comentario!=null; else elseBlock">{{comentario.comentario}}</td>
+            <ng-template #elseBlock><td>N.A</td></ng-template>
+          </div>
+          <div>
+            <select class="form-control" id="indicesSelect">
+                <option [ngValue]="null" [disabled]="true" >Indices</option>
+                <div *ngFor="let indice of indices">
+                   <option *ngFor="let i of indice">{{i.id.nombreIndice}}</option>
+                </div>
+            </select>
+          </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
