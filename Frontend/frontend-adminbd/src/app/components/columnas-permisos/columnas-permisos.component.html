@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <h2>Permisos Columnas</h2>
+    <table class="table table-bordered mt-4">
+        <thead>
+          <tr>
+            <th>Nombre Columna</th>
+            <th>Propietario Columna</th>
+            <th>Privilegio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let columna of columnas">
+            <td>{{columna.id.nombreTabla}}</td>
+            <td>{{columna.propietario}}</td>
+            <td>{{columna.id.privilegio}}</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,52 @@
+<div class="container mt-4">
+  <h2>Jobs</h2>
+</div>
+<div class="container mt-4">
+    <table class="table table-bordered mt-4">
+        <thead>
+          <tr>
+            <th>Propietario</th>
+            <th>Clase</th>
+            <th>Comentario</th>
+            <th>Habilitado</th>
+            <th>Nombre de la credencial</th>
+            <th>Destino</th>
+            <th>Nombre del programa</th>
+            <th>Tipo</th>
+            <th>Acción</th>
+            <th>Número de argumentos</th>
+            <th>Propietario de la programación</th>
+            <th>Nombre de la programación</th>
+            <th>Tipo de la programación</th>
+            <th>Fecha de inicio</th>
+            <th>Intervalo de repetición</th>
+            <th>Fecha de finalización</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let job of jobs">
+            <td>{{job.propietario}}</td>
+            <td>{{job.nombre}}</td>
+            <td>{{job.clase}}</td>
+            <td>{{job.comentarios}}</td>
+            <td>{{job.habilitado}}</td>
+            <td>{{job.nombreCredencial}}</td>
+            <td>{{job.destino}}</td>
+            <td>{{job.nombrePrograma}}</td>
+            <td>{{job.tipo}}</td>
+            <td>{{job.accion}}</td>
+            <td>{{ job.numeroArgumentos }}</td>
+            <td>{{ job.propietarioCalendario }}</td>
+            <td>{{ job.nombreCalendario }}</td>
+            <td>{{ job.tipoCalendario }}</td>
+            <td>{{ job.fechaInicio }}</td>
+            <td>{{ job.intervaloRepeticion }}</td>
+            <td>{{ job.fechaFin }}</td>
+            <div>
+              <button (click)="updateHabilitado(job)" type="button" class="btn btn-primary">Columnas</button>
+            </div>
+          </tr>
+        </tbody>
+    </table>
+</div>
+

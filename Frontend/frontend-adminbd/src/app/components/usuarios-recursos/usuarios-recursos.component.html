@@ -1,0 +1,105 @@
+
+<div class="container mt-4">
+    <h2>Recursos Usuarios</h2>
+    <div class="form-group mt-4">
+       <label for="inputUsuarioNoPropietario">Nombre usuario</label>
+       <input ng-value="propietario" type="text" class="form-control" id="inputUsuarioNoPropietario" placeholder="Ingrese el nombre del usuario">
+    </div>
+    <button (click)="buscarRecursosUsuario()" class="btn btn-primary">Buscar</button>
+</div>
+<div class="container mt-5" id="accordion">
+
+    <!-------------------------------------Procedimientos----------------------------------------->
+    <div class="card mt-4">
+      <div class="card-header" id="headingProcedimientos">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseProcedimientos" aria-expanded="true" aria-controls="collapseProcedimientos">
+            Procedimientos
+          </button>
+        </h5>
+       </div>
+       <div id="collapseProcedimientos" class="collapse" aria-labelledby="headingProcedimientos" data-parent="#accordion">
+        <div class="card-body">
+            <div class="container mt-4">
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                         <th>Estado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let procedimiento of procedimientos">
+                        <td>{{procedimiento.id.nombre}}</td>
+                        <td>{{procedimiento.estado}}</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------------------------Funciones----------------------------------------->
+    <div class="card mt-4">
+        <div class="card-header" id="headingFunciones">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFunciones" aria-expanded="true" aria-controls="collapseFunciones">
+              Funciones
+            </button>
+          </h5>
+         </div>
+         <div id="collapseFunciones" class="collapse" aria-labelledby="headingFunciones" data-parent="#accordion">
+          <div class="card-body">
+              <div class="container mt-4">
+                  <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Nombre</th>
+                           <th>Estado</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let funcion of funciones">
+                          <td>{{funcion.id.nombre}}</td>
+                          <td>{{funcion.estado}}</td>
+                        </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <!-------------------------------------Paquetes----------------------------------------->
+      <div class="card mt-4">
+        <div class="card-header" id="headingPaquetes">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapsePaquetes" aria-expanded="true" aria-controls="collapsePaquetes">
+              Paquetes
+            </button>
+          </h5>
+         </div>
+         <div id="collapsePaquetes" class="collapse" aria-labelledby="headingPaquetes" data-parent="#accordion">
+            <div class="card-body">
+                <div class="container mt-4">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Estado</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let paquete of paquetes">
+                            <td>{{paquete.id.nombre}}</td>
+                            <td>{{paquete.estado}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+

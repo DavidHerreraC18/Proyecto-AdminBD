@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h2>Tablespaces</h2>
+</div>
+  <div class="container mt-5">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Espacio ocupado</th>
+          <th>Espacio libre</th>
+        </tr>
+      </thead>
+      <tbody>
+       <tr *ngFor="let tablespace of tablespaces">
+          <td>{{tablespace.tablespace}}</td>
+          <td>{{tablespace.usado}}</td>
+          <td>{{tablespace.libre}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

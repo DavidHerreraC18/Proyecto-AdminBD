@@ -4,9 +4,12 @@ export class IndiceId {
 
     nombreColumna: string;
 
-    constructor(nombreTabla: string, nombreColumna: string){
+    nombreIndice: string;
+
+    constructor(nombreTabla: string, nombreColumna: string, nombreIndice: string){
         this.nombreTabla = nombreTabla;
         this.nombreColumna = nombreColumna;
+        this.nombreIndice = nombreIndice;
     }
 
 }

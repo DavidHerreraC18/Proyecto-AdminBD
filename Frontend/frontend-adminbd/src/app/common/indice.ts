@@ -2,13 +2,10 @@ import { IndiceId } from "./indice-id";
 
 export class Indice {
 
-    id: IndiceId;
+    id: IndiceId;  
 
-    nombreIndice: string;
-
-    constructor(id: IndiceId, nombreIndice: string){
+    constructor(id: IndiceId){
         this.id = id;
-        this.nombreIndice = nombreIndice;
     }
 
 }
