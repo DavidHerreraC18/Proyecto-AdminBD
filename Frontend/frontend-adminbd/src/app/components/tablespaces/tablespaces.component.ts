@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tablespaces.component.css']
 })
 export class TablespacesComponent implements OnInit {
-
+ 
   constructor() { }
 
   ngOnInit(): void {

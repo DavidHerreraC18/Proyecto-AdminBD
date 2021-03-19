@@ -18,6 +18,8 @@ import { TablaPermisosService } from './services/permisos_usuario/tabla-permisos
 import { ColumnasPermisosComponent } from './components/columnas-permisos/columnas-permisos.component';
 import { TablasService } from './services/tabla_propietario/tablas.service';
 import { ColumnasPermisosService } from './services/permisos_usuario/columnas-permisos.service';
+import { JobsService } from './services/jobs/jobs.service';
+import { UsuariosRecursosService } from './services/usuarios_recursos/usuarios-recursos.service';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { ColumnasPermisosService } from './services/permisos_usuario/columnas-pe
     TablasService, 
     ColumnaService, 
     TablaPermisosService,
-    ColumnasPermisosService
+    ColumnasPermisosService,
+    JobsService,
+    UsuariosRecursosService
   ],
   bootstrap: [AppComponent]
 })
