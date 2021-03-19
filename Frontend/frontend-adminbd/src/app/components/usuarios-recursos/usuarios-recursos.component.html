@@ -1,11 +1,10 @@
-
 <div class="container mt-4">
     <h2>Recursos Usuarios</h2>
     <div class="form-group mt-4">
-       <label for="inputUsuarioNoPropietario">Nombre usuario</label>
-       <input ng-value="propietario" type="text" class="form-control" id="inputUsuarioNoPropietario" placeholder="Ingrese el nombre del usuario">
+       <label for="inputUsuarioRecurso">Nombre usuario</label>
+       <input ng-value="propietario" type="text" class="form-control" id="inputUsuarioRecurso" placeholder="Ingrese el nombre del usuario">
     </div>
-    <button (click)="buscarRecursosUsuario()" class="btn btn-primary">Buscar</button>
+    <button (click)="buscarRecursosUsuario(propietario)" class="btn btn-primary">Buscar</button>
 </div>
 <div class="container mt-5" id="accordion">
 

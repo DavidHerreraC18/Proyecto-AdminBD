@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Objeto } from 'src/app/common/objeto';
+import { UsuariosRecursosService } from 'src/app/services/usuarios_recursos/usuarios-recursos.service';
 
 @Component({
   selector: 'app-usuarios-recursos',
@@ -14,13 +15,29 @@ export class UsuariosRecursosComponent implements OnInit {
   
   propietario: string = '';
 
-  constructor() { }
+  constructor(private usuariosRecursosService: UsuariosRecursosService) { }
 
   ngOnInit(): void {
+    
   }
 
-  buscarRecursosUsuario(): void {
-   
+  buscarRecursosUsuario(propietario: string): void {
+    console.log(propietario);
+    this.usuariosRecursosService.getProcedimientos(propietario).subscribe(
+      response => {
+        this.procedimientos = response
+      }
+    );
+    this.usuariosRecursosService.getFunciones(propietario).subscribe(
+      response => {
+        this.funciones = response
+      }
+    );
+    this.usuariosRecursosService.getPaquetes(propietario).subscribe(
+      response => {
+        this.paquetes = response
+      }
+    );
   }
 
 }

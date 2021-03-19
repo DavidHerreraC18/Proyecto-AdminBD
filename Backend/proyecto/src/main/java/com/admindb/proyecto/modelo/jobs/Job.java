@@ -51,7 +51,7 @@ public class Job {
     private String accion;
 
     @Column(name = "number_of_arguments")
-    private int numeroArgumentos;
+    private Integer numeroArgumentos;
 
     @Column(name = "schedule_owner")
     private String propietarioCalendario;
