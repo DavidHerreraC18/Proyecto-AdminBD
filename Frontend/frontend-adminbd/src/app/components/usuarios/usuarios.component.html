@@ -3,7 +3,7 @@
   <form class="mt-4">
     <div class="form-group">
       <label for="usuariosSelect">Usuarios</label>
-      <select class="form-control col-md-4" id="usuariosSelect">
+      <select  [(ngModel)]="propietario" [ngModelOptions]="{standalone: true}" class="form-control col-md-4" id="usuariosSelect" (change)='handlerTablasPropietario()'>
         <option>Seleccione un usuario</option>
         <option *ngFor="let usuario of usuarios">{{usuario.nombre}}</option>
       </select>

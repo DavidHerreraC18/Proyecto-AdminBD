@@ -15,11 +15,13 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 })
 export class UsuariosComponent implements OnInit {
 
-  usuarios : Usuario[] = [];
+  usuarios : Usuario[] = [new Usuario('jola')];
 
   tablas: Tabla [] = [];
 
   comentarios: ComentarioTabla [] = [];
+
+  propietario: string = '';
  
   constructor(private usuarioServicio: UsuariosService, private tablasService: TablasService) { }
 
@@ -36,8 +38,9 @@ export class UsuariosComponent implements OnInit {
     );
   }
 
-  handlerTablasPropietario(propietario: string): void{
-    this.tablasService.getTablasPropietario(propietario).subscribe(
+  handlerTablasPropietario(): void{
+    console.log(this.propietario);
+    this.tablasService.getTablasPropietario(this.propietario).subscribe(
       response => {
         this.tablas = response
       }
