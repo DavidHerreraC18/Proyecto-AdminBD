@@ -2,9 +2,9 @@
     <h2>Permisos Usuarios</h2>
     <div class="form-group mt-4">
        <label for="inputUsuarioNoPropietario">Nombre usuario</label>
-       <input ng-value="otorgado" type="text" class="form-control" id="inputUsuarioNoPropietario" placeholder="Ingrese el nombre del usuario">
+       <input [(ngModel)]="otorgado" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="inputUsuarioNoPropietario" placeholder="Ingrese el nombre del usuario">
     </div>
-    <button (click)="buscarTablasPermisosUsuario(otorgado)" class="btn btn-primary">Buscar</button>
+    <button (click)="buscarTablasPermisosUsuario()" class="btn btn-primary">Buscar</button>
 </div>
 <div class="container mt-5">
     <table class="table table-bordered">
@@ -22,7 +22,7 @@
             <td>{{tabla.propietario}}</td>
             <td>{{tabla.id.privilegio}}</td>
             <div>
-              <button routerLink="/columnas-permisos/otorgado/{{ tabla.id.nombreTabla }}" type="button" class="btn btn-primary">Columnas</button>
+              <button (click)="mostrarColumnas(tabla.id.nombreTabla)" type="button" class="btn btn-primary">Columnas</button>
             </div>
           </tr>
         </tbody>

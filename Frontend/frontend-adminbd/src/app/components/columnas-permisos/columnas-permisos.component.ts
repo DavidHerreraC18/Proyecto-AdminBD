@@ -20,7 +20,7 @@ export class ColumnasPermisosComponent implements OnInit {
 
   handlerColumnasPermisos(): void{
     const otorgado = this.activateRoute.snapshot.paramMap.get('otorgado') as string;
-    const nombreTabla = this.activateRoute.snapshot.paramMap.get('nombreTabla') as string;
+    const nombreTabla = this.activateRoute.snapshot.paramMap.get('nombre-tabla') as string;
     this.columnasPermisosService.getColumnasTablasPermisos(otorgado, nombreTabla).subscribe(
       response => {
         this.columnas = response

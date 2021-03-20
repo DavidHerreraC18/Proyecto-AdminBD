@@ -9,7 +9,7 @@ import { JobsService } from 'src/app/services/jobs/jobs.service';
 })
 export class JobsComponent implements OnInit {
   
-  jobs : Job[] = [];
+  jobs : Job[] = [new Job('','','','','','','','','','',0,'','','',new Date(),'',new Date())];
 
   constructor(private jobsServices: JobsService) { }
 
