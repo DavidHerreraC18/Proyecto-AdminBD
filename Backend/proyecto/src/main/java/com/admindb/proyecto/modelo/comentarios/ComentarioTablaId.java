@@ -17,16 +17,11 @@ import lombok.EqualsAndHashCode;
 @Embeddable
 @EqualsAndHashCode
 @RequiredArgsConstructor
-public class ComentarioColumnaId implements Serializable {
-    
+public class ComentarioTablaId implements Serializable {
+
     @Column(name = "table_name")
     private String nombreTabla;
 
-    @Column(name = "column_name")
-    private String nombreColumna;
-
     @Column(name = "owner")
     private String propietario;
-
-
 }

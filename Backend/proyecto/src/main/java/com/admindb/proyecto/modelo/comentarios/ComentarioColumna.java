@@ -22,4 +22,5 @@ public class ComentarioColumna {
 
     @Column(name = "comments")
     private String comentario;
+
 }

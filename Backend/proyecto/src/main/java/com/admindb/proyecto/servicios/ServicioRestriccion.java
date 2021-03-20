@@ -27,8 +27,8 @@ public class ServicioRestriccion {
         return repositorioRestriccion.findById(id).get();
     }
 
-    @GetMapping(value = "propietario/{id}", produces = "application/json")
-    public List<Restriccion> findByNombreTabla( @PathVariable("id") String id) {
-        return repositorioRestriccion.findByIdNombreTabla(id);
+    @GetMapping(value = "propietario/{id}/{propietario}", produces = "application/json")
+    public List<Restriccion> findByNombreTablaAndPropietario( @PathVariable("id") String id, @PathVariable("propietario") String propietario) {
+        return repositorioRestriccion.findByIdNombreTablaAndIdPropietario(id,propietario);
     }
 }

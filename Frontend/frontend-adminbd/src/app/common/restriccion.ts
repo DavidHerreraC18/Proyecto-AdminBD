@@ -2,12 +2,10 @@ import { RestriccionId } from "./restriccion-id";
 
 export class Restriccion {
 
-    id: RestriccionId;
 
     restriccion: string;
 
-    constructor(id: RestriccionId, restriccion: string){
-        this.id = id;
+    constructor(restriccion: string){
         this.restriccion = restriccion;
     }
 }

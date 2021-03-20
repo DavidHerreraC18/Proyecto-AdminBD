@@ -12,12 +12,8 @@
       </thead>
       <tbody>
         <tr *ngFor="let columna of columnas">
-          <td>{{columna.id.nombreColumna}}</td>
+          <td>{{columna.nombreColumna}}</td>
           <td>{{columna.tipoDato}}</td>
-          <div *ngFor="let comentario of comentarios">
-            <td *ngIf="comentario.comentario!=null; else elseBlock">{{comentario.comentario}}</td>
-            <ng-template #elseBlock><td>N.A</td></ng-template>
-          </div>
           <div>
             <select class="form-control" id="indicesSelect">
                 <option [ngValue]="null" [disabled]="true" >Indices</option>

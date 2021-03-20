@@ -25,10 +25,8 @@
       <tr *ngFor="let tabla of tablas">
         <td>{{tabla.nombre}}</td>
         <td>{{tabla.propietario}}</td>
-        <div *ngFor="let comentario of comentarios ">
-          <td *ngIf="comentario.comentario!=null; else elseBlock">{{comentario.comentario}}</td>
-          <ng-template #elseBlock><td>N.A</td></ng-template>
-        </div>
+        <td>{{tabla.comentarios}}</td>
+        <td>{{tabla.restricciones}}</td>
         <div>
           <button routerLink="/columnas/{{ tabla.nombre }}" type="button" class="btn btn-primary">Columnas</button>
         </div>

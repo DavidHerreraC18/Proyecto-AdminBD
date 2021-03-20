@@ -33,9 +33,9 @@ export class ColumnasTablasComponent implements OnInit {
       }
     );
     
-    this.handlerComentariosColumnas(nombreTabla);
+    //this.handlerComentariosColumnas(nombreTabla);
   }
-  
+  /*
   handlerComentariosColumnas(nombreTabla: string): void {
     this.columnasService.getComentariosColumna(nombreTabla).subscribe(
       response => {
@@ -45,7 +45,7 @@ export class ColumnasTablasComponent implements OnInit {
 
     this.handlerIndicesColumnas(nombreTabla);
   }
-
+  
   handlerIndicesColumnas(nombreTabla: string): void {  
     this.columnas.forEach(columna => {
       this.columnasService.getIndicesColumna(nombreTabla, columna.id.nombreColumna).subscribe(
@@ -55,7 +55,7 @@ export class ColumnasTablasComponent implements OnInit {
       );
     });
 
-  }
+  }*/
 
 
 }

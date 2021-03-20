@@ -40,9 +40,14 @@ public class ServicioComentario {
         return repositorioComentarioColumna.findByIdNombreTabla(id);
     }
 
-    @GetMapping(value = "/tabla/{id}", produces = "application/json")
-    public ComentarioTabla findComentarioTablaByNombreTabla( @PathVariable("id") String id) {
-        return repositorioComentarioTabla.findById(id).get();
+    @GetMapping(value = "/columna/{id}/{idcol}", produces = "application/json")
+    public List<ComentarioColumna> findComentarioColumnaByNombreTablaAndIdNombreColumna( @PathVariable("id") String id, @PathVariable("idcol") String idcol) {
+        return repositorioComentarioColumna.findByIdNombreTablaAndIdNombreColumna(id,idcol);
+    }
+
+    @GetMapping(value = "/tabla/{id}/{propietario}", produces = "application/json")
+    public List<ComentarioTabla> findComentarioTablaByNombreTabla( @PathVariable("id") String id, @PathVariable("propietario") String propietario ) {
+        return repositorioComentarioTabla.findByIdNombreTablaAndIdPropietario(id,propietario);
     }
     
 }

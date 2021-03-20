@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RepositorioRestriccion extends JpaRepository<Restriccion,String> {
     public List<Restriccion> findByIdNombreTabla(String nombreTabla);
+    public List<Restriccion> findByIdNombreTablaAndIdPropietario(String nombreTabla, String propietario);
 }

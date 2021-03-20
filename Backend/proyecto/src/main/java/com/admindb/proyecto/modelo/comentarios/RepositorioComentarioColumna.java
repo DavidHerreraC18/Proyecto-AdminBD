@@ -9,4 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface RepositorioComentarioColumna extends JpaRepository<ComentarioColumna,ComentarioColumnaId> {
     List<ComentarioColumna> findByIdNombreTabla(String nombreTabla);
     List<ComentarioColumna> findByIdNombreColumna(String nombreColumna);
+    List<ComentarioColumna> findByIdPropietario(String propietario);
+    List<ComentarioColumna> findByIdNombreTablaAndIdNombreColumna(String nombreTabla, String nombreColumna);
 }

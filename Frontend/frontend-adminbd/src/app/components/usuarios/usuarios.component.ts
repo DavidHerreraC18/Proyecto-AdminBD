@@ -45,8 +45,8 @@ export class UsuariosComponent implements OnInit {
         this.tablas = response
       }
     );
-    console.log("wahooo");
-    this.handlerComentariosTabla();
+    //console.log("wahooo");
+    //this.handlerComentariosTabla();
   }
 
   handlerComentariosTabla(): void {
