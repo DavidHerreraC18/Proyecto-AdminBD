@@ -38,7 +38,7 @@ public class ServicioPermiso {
         return repositorioPermisoTabla.findAll();
     }
 
-    @GetMapping(value = "/{otorgado}/{tabla}", produces = "application/json")
+    @GetMapping(value = "columna/{otorgado}/{tabla}", produces = "application/json")
     public List<PermisoColumna> findPermisoColumnaByOtorgado( @PathVariable("otorgado") String otorgado, @PathVariable("tabla") String tabla) {
         return repositorioPermisoColumna.findByIdOtorgadoAndIdNombreTabla(otorgado, tabla);
     }

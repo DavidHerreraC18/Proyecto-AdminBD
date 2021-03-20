@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ComentarioTabla } from 'src/app/common/comentario-tabla';
 import { Tabla } from 'src/app/common/tabla';
 import { Usuario } from 'src/app/common/usuario';
@@ -23,7 +24,7 @@ export class UsuariosComponent implements OnInit {
 
   propietario: string = '';
  
-  constructor(private usuarioServicio: UsuariosService, private tablasService: TablasService) { }
+  constructor(private usuarioServicio: UsuariosService, private tablasService: TablasService, private router: Router) { }
 
   ngOnInit(): void {  
     this.handleListaUsuarios();
@@ -58,6 +59,10 @@ export class UsuariosComponent implements OnInit {
           }
        )
     });
+  }
+
+  mostrarColumnasPropietarios(nombre:string){
+    this.router.navigate(['/columnas-propietarios/'+'/'+nombre])
   }
 
 }

@@ -8,7 +8,7 @@ import { Objeto } from 'src/app/common/objeto';
 })
 export class UsuariosRecursosService {
   
-  private urlBase = 'http://localhost:8080/';
+  private urlBase = 'http://localhost:8080/objetos/';
   private pathProcedimientos ='procedures';
   private pathFunciones ='functions';
   private pathPaquetes ='packages';

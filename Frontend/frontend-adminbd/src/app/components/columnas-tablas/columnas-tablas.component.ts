@@ -26,7 +26,7 @@ export class ColumnasTablasComponent implements OnInit {
   }
 
   handlerColumnasTabla(): void{
-    const nombreTabla = this.activeRoute.snapshot.paramMap.get('nombre') as string;
+    const nombreTabla = this.activeRoute.snapshot.paramMap.get('nombre-tabla') as string;
     this.columnasService.getColumnasTabla(nombreTabla).subscribe(
       response => {
         this.columnas = response

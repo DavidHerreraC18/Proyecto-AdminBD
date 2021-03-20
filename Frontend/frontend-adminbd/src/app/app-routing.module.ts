@@ -23,7 +23,7 @@ const routes: Routes = [
    component: ColumnasPermisosComponent},
   {path: 'permisos-usuarios',
    component: PermisosUsuariosComponent},
-  {path: 'columnas-propietarios',
+  {path: 'columnas-propietarios/:nombre-tabla',
    component: ColumnasTablasComponent},
   {path: 'usuarios-propietarios',
    component: UsuariosComponent},

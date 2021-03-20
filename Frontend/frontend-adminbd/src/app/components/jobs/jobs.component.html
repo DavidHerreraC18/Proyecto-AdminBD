@@ -1,7 +1,7 @@
-<div class="container mt-4">
+<div class="mt-4 ml-2">
   <h2>Jobs</h2>
 </div>
-<div class="container mt-4">
+<div class="mt-4 ml-2">
     <table class="table table-bordered mt-4">
         <thead>
           <tr>
@@ -22,7 +22,7 @@
             <th>Fecha de inicio</th>
             <th>Intervalo de repetición</th>
             <th>Fecha de finalización</th>
-            <th>Acción</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -44,9 +44,14 @@
             <td>{{ job.fechaInicio }}</td>
             <td>{{ job.intervaloRepeticion }}</td>
             <td>{{ job.fechaFin }}</td>
-            <div>
-              <button (click)="updateHabilitado(job)" type="button" class="btn btn-primary">Habilitado</button>
+            <div class="row justify-content-center" *ngIf = "job.habilitado === 'TRUE'; else elseBlock">
+              <button class="col justify-content-center" (click)="updateHabilitado(job)" type="button" class="btn btn-primary">Habilitar</button>
             </div>
+            <ng-template #elseBlock>
+              <div class="justify-content-center align-items-center">
+                <button (click)="updateHabilitado(job)" type="button" class="btn btn-primary">Deshabilitar</button>
+              </div>
+            </ng-template>
           </tr>
         </tbody>
     </table>

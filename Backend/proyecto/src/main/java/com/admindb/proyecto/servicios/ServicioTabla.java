@@ -50,7 +50,7 @@ public class ServicioTabla {
             List<String> comentariosString = new ArrayList<>();
             for(Restriccion r: restricciones)
             {
-                restriccionesString.add(r.getRestriccion());
+                restriccionesString.add(r.getId().getNombreRestriccion());
             }
             for(ComentarioTabla ct: comentarios)
             {

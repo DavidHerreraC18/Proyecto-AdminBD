@@ -14,14 +14,8 @@
         <tr *ngFor="let columna of columnas">
           <td>{{columna.nombreColumna}}</td>
           <td>{{columna.tipoDato}}</td>
-          <div>
-            <select class="form-control" id="indicesSelect">
-                <option [ngValue]="null" [disabled]="true" >Indices</option>
-                <div *ngFor="let indice of indices">
-                   <option *ngFor="let i of indice">{{i.id.nombreIndice}}</option>
-                </div>
-            </select>
-          </div>
+          <td>{{columna.comentarios}}</td>
+          <td>{{columna.indices}}</td>          
         </tr>
       </tbody>
     </table>

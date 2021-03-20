@@ -12,7 +12,7 @@ import { TablaPermisosService } from 'src/app/services/permisos_usuario/tabla-pe
 })
 export class PermisosUsuariosComponent implements OnInit {
   
-  tablas: PermisoTabla[] = [ new PermisoTabla(new PermisoTablaId('1','s','s'),'j')];
+  tablas: PermisoTabla[] = [];
   otorgado: string = '';
   
   constructor(private tablaPermisosService: TablaPermisosService, private router: Router) { }
