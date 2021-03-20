@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ColumnasPermisosComponent } from './components/columnas-permisos/columnas-permisos.component';
 import { ColumnasTablasComponent } from './components/columnas-tablas/columnas-tablas.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -18,6 +19,8 @@ const routes: Routes = [
    component: UsuariosRecursosComponent},
   {path: 'jobs',
    component: JobsComponent},
+  {path: 'columnas-permisos/:otorgado/:nombre-tabla',
+   component: ColumnasPermisosComponent},
   {path: 'permisos-usuarios',
    component: PermisosUsuariosComponent},
   {path: 'columnas-propietarios',

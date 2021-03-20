@@ -21,19 +21,19 @@ export class UsuariosRecursosComponent implements OnInit {
     
   }
 
-  buscarRecursosUsuario(propietario: string): void {
-    console.log(propietario);
-    this.usuariosRecursosService.getProcedimientos(propietario).subscribe(
+  buscarRecursosUsuario(): void {
+    console.log(this.propietario);
+    this.usuariosRecursosService.getProcedimientos(this.propietario).subscribe(
       response => {
         this.procedimientos = response
       }
     );
-    this.usuariosRecursosService.getFunciones(propietario).subscribe(
+    this.usuariosRecursosService.getFunciones(this.propietario).subscribe(
       response => {
         this.funciones = response
       }
     );
-    this.usuariosRecursosService.getPaquetes(propietario).subscribe(
+    this.usuariosRecursosService.getPaquetes(this.propietario).subscribe(
       response => {
         this.paquetes = response
       }

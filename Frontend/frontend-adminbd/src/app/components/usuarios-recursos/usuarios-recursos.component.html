@@ -2,9 +2,9 @@
     <h2>Recursos Usuarios</h2>
     <div class="form-group mt-4">
        <label for="inputUsuarioRecurso">Nombre usuario</label>
-       <input ng-value="propietario" type="text" class="form-control" id="inputUsuarioRecurso" placeholder="Ingrese el nombre del usuario">
+       <input [(ngModel)]="propietario" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="inputUsuarioRecurso" placeholder="Ingrese el nombre del usuario">
     </div>
-    <button (click)="buscarRecursosUsuario(propietario)" class="btn btn-primary">Buscar</button>
+    <button (click)="buscarRecursosUsuario()" class="btn btn-primary">Buscar</button>
 </div>
 <div class="container mt-5" id="accordion">
 

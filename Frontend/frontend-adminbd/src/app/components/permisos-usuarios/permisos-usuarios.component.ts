@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PermisoTabla } from 'src/app/common/permiso-tabla';
+import { PermisoTablaId } from 'src/app/common/permiso-tabla-id';
 import { ColumnasPermisosService } from 'src/app/services/permisos_usuario/columnas-permisos.service';
 import { TablaPermisosService } from 'src/app/services/permisos_usuario/tabla-permisos.service';
 
@@ -10,21 +12,26 @@ import { TablaPermisosService } from 'src/app/services/permisos_usuario/tabla-pe
 })
 export class PermisosUsuariosComponent implements OnInit {
   
-  tablas: PermisoTabla[] = [];
+  tablas: PermisoTabla[] = [ new PermisoTabla(new PermisoTablaId('1','s','s'),'j')];
   otorgado: string = '';
-
-  constructor(private tablaPermisosService: TablaPermisosService) { }
+  
+  constructor(private tablaPermisosService: TablaPermisosService, private router: Router) { }
 
   ngOnInit(): void {
-
+    
   }
 
-  buscarTablasPermisosUsuario(otorgado: string): void{
-    this.tablaPermisosService.getTablasPermisos(otorgado).subscribe(
+  buscarTablasPermisosUsuario(): void{
+    this.tablaPermisosService.getTablasPermisos(this.otorgado).subscribe(
       response => {
         this.tablas = response
       }
     );
+  }
+
+  mostrarColumnas(nombreTabla: string){
+    console.log(nombreTabla+this.otorgado);
+     this.router.navigate(['/columnas-permisos/'+this.otorgado+'/'+nombreTabla]);
   }
 
 
