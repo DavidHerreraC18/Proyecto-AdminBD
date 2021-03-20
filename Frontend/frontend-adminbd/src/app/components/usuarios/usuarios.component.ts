@@ -45,7 +45,7 @@ export class UsuariosComponent implements OnInit {
         this.tablas = response
       }
     );
-    
+    console.log("wahooo");
     this.handlerComentariosTabla();
   }
 
@@ -53,6 +53,7 @@ export class UsuariosComponent implements OnInit {
     this.tablas.forEach(element => {
        this.tablasService.getComentarioTabla(element.nombre).subscribe(
           response => {
+            console.log(response.comentario);
             this.comentarios.push(response);
           }
        )

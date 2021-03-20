@@ -12,12 +12,13 @@ export class TablasService {
   
   private urlBase = 'http://localhost:8080/';
   private pathTabla='tablas';
+  private pathPropietario='propietario';
   private pathComentarios = 'comentarios/tabla';
  
   constructor(private httpClient: HttpClient) { }
 
   getTablasPropietario (propietario: string): Observable<Tabla[]> {
-    return this.httpClient.get<Tabla[]>(this.urlBase+this.pathTabla+'/'+propietario);
+    return this.httpClient.get<Tabla[]>(this.urlBase+this.pathTabla+'/'+this.pathPropietario+'/'+propietario);
   }
 
   getComentarioTabla(nombreTabla: string): Observable<ComentarioTabla>{
